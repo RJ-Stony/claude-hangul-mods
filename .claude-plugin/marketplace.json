@@ -1,0 +1,9 @@
+{
+  "name": "healing-mods",
+  "owner": { "name": "joshua" },
+  "plugins": [
+    { "name": "yuni", "source": "./yuni" },
+    { "name": "hangul-view", "source": "./hangul-view" },
+    { "name": "md-prompt", "source": "./md-prompt" }
+  ]
+}

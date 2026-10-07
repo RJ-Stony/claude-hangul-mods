@@ -1,0 +1,7 @@
+{
+  "name": "yuni",
+  "version": "0.3.0",
+  "description": "유니: 일하는 방식대로 진화하는 유니콘 펫. 입력창 위 정보 줄, 위험 명령어 경보, 휴식·숨쉬기 알림",
+  "author": { "name": "joshua" },
+  "types": "./types/index.d.ts"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "md-prompt",
+  "version": "0.2.0",
+  "description": "입력창 꾸미기: 입력하는 동안 코드 블록은 문법 색이 들어간 카드로, 굵게·목록·표·링크·제목은 색으로 보여줘요. 색만 칠하고 글자는 바꾸지 않아요. (원작: nogu66/md-prompt, MIT)",
+  "author": {
+    "name": "nogu66"
+  },
+  "homepage": "https://github.com/nogu66/md-prompt",
+  "repository": "https://github.com/nogu66/md-prompt",
+  "license": "MIT",
+  "keywords": [
+    "markdown",
+    "prompt",
+    "code-block",
+    "syntax-highlight",
+    "tables",
+    "function-hooks",
+    "claude-mods"
+  ],
+  "userConfig": {
+    "enabled": {
+      "type": "boolean",
+      "title": "입력창 마크다운 색칠",
+      "description": "입력하는 동안 입력창에 마크다운 색을 입혀요. /md-prompt on|off|toggle로도 바꿀 수 있어요.",
+      "default": true
+    }
+  }
+}

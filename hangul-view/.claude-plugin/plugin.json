@@ -1,0 +1,301 @@
+{
+  "name": "hangul-view",
+  "version": "0.2.1",
+  "description": "한글 화면: 표·코드·mermaid·제목을 읽기 쉽게 그리고, 도구 줄과 스피너를 한글로 바꿔요 (prismantis 한글판)",
+  "author": {
+    "name": "joshua"
+  },
+  "homepage": "https://github.com/NahumLitvin/prismantis",
+  "repository": "https://github.com/NahumLitvin/prismantis",
+  "license": "MIT",
+  "keywords": [
+    "mod",
+    "korean",
+    "한글",
+    "markdown",
+    "tables",
+    "mermaid"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "enabled": {
+      "type": "boolean",
+      "title": "사용",
+      "description": "이 mod로 답변을 그려요. 끄면 Claude Code 기본 화면으로 돌아가요.",
+      "default": true
+    },
+    "theme": {
+      "type": "string",
+      "title": "테마",
+      "description": "기본 색 조합이에요. 밝은 테마: catppuccin-latte, gruvbox-light, rose-pine-dawn, github-light, solarized-light. mono는 굵게와 흐리게만 써요.",
+      "default": "catppuccin-mocha",
+      "options": [
+        "catppuccin-mocha",
+        "catppuccin-latte",
+        "dracula",
+        "nord",
+        "tokyo-night",
+        "gruvbox-dark",
+        "gruvbox-light",
+        "rose-pine",
+        "rose-pine-dawn",
+        "everforest",
+        "github-dark",
+        "github-light",
+        "one-dark",
+        "solarized-dark",
+        "solarized-light",
+        "mono"
+      ]
+    },
+    "headingStyle": {
+      "type": "string",
+      "title": "제목 모양",
+      "description": "터미널은 글자 크기가 하나라서 제목은 굵기로 구분해요. banner(H1 상자, H2 굵은 줄), bold, underline, uppercase.",
+      "default": "banner",
+      "options": [
+        "bold",
+        "underline",
+        "uppercase",
+        "banner"
+      ]
+    },
+    "tableStyle": {
+      "type": "string",
+      "title": "표 모양",
+      "description": "box: 칸마다 테두리. rules: 머리줄과 행 사이에 줄. grid: 굵은 머리줄과 넓은 간격. minimal: 머리줄만.",
+      "default": "box",
+      "options": [
+        "box",
+        "rules",
+        "grid",
+        "minimal"
+      ]
+    },
+    "promptStyle": {
+      "type": "string",
+      "title": "내 입력 모양",
+      "description": "내가 입력한 말이 대화에 어떻게 보일지 정해요. bubble: 둥근 말풍선. bar: 왼쪽 막대. chevron: › 표시. off: 기본 모양.",
+      "default": "bubble",
+      "options": [
+        "bubble",
+        "bar",
+        "chevron",
+        "off"
+      ]
+    },
+    "toolStyle": {
+      "type": "string",
+      "title": "도구 줄 모양",
+      "description": "도구 실행 줄(실행, 읽기, 수정)의 배치예요. chat: 도구 줄은 오른쪽에 흐리게, Claude 말은 왼쪽. tree-dim: 문장 아래 ⎿로 붙여 흐리게. tree-bold: tree-dim에 한 줄 문장을 굵게. classic: 원래 모양.",
+      "default": "tree-dim",
+      "options": [
+        "chat",
+        "tree-dim",
+        "tree-bold",
+        "classic"
+      ]
+    },
+    "taskStyle": {
+      "type": "string",
+      "title": "할 일 목록 모양",
+      "description": "- [ ]와 - [x] 항목 모양이에요. checks, ticks, box, progress(완료 막대).",
+      "default": "checks",
+      "options": [
+        "checks",
+        "ticks",
+        "box",
+        "progress"
+      ]
+    },
+    "rtl": {
+      "type": "string",
+      "title": "오른쪽에서 왼쪽 글자",
+      "description": "히브리어·아랍어용 설정이에요. 한국어만 쓰면 그대로 두세요.",
+      "default": "auto",
+      "options": [
+        "auto",
+        "warp",
+        "kitty",
+        "apple-terminal",
+        "iterm",
+        "ghostty",
+        "wezterm",
+        "vscode",
+        "alacritty",
+        "windows-terminal",
+        "gnome",
+        "konsole",
+        "off"
+      ]
+    },
+    "highlightNumbers": {
+      "type": "boolean",
+      "title": "숫자 강조",
+      "description": "버전, ID, 개수, 시간에 색을 입혀요.",
+      "default": true
+    },
+    "highlightPaths": {
+      "type": "boolean",
+      "title": "경로 강조",
+      "description": "~/src/app.ts 같은 파일 경로에 색을 입혀요.",
+      "default": true
+    },
+    "accentColor": {
+      "type": "string",
+      "title": "Accent",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "headingColor": {
+      "type": "string",
+      "title": "Heading",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "tableHeaderColor": {
+      "type": "string",
+      "title": "Table header",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "tableRuleColor": {
+      "type": "string",
+      "title": "Table rule",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "numberColor": {
+      "type": "string",
+      "title": "Numbers",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "pathColor": {
+      "type": "string",
+      "title": "Paths",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "linkColor": {
+      "type": "string",
+      "title": "Links",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "inlineCodeColor": {
+      "type": "string",
+      "title": "Inline code",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "codeCommandColor": {
+      "type": "string",
+      "title": "Code command",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "codeFlagColor": {
+      "type": "string",
+      "title": "Code flag",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "codeStringColor": {
+      "type": "string",
+      "title": "Code string",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "strongColor": {
+      "type": "string",
+      "title": "Bold text",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "quoteColor": {
+      "type": "string",
+      "title": "Quote",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "mermaidAscii": {
+      "type": "boolean",
+      "title": "mermaid ASCII만",
+      "description": "상자 선 글자 대신 + - | > 로 그려요. 글꼴에 선 글자가 없을 때 켜세요.",
+      "default": false
+    },
+    "diagramColor": {
+      "type": "string",
+      "title": "Diagram lines",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "diagramTextColor": {
+      "type": "string",
+      "title": "Diagram text",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "toolRows": {
+      "type": "boolean",
+      "title": "도구 줄 한글화",
+      "description": "도구 실행을 한 줄로 그려요: 실행 npm test, 읽기 src/app.ts, 수정 README.md. 결과는 그 아래 그대로 나와요.",
+      "default": true
+    },
+    "emphasisColor": {
+      "type": "string",
+      "title": "Italic text",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "codeTextColor": {
+      "type": "string",
+      "title": "Code text",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "codeCommentColor": {
+      "type": "string",
+      "title": "Code comment",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "ruleColor": {
+      "type": "string",
+      "title": "Rules",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "bulletColor": {
+      "type": "string",
+      "title": "Bullets",
+      "description": "색: #a6e3a1, rgb(166,227,161), ansi256(114), 이름(green). 비우면 테마 색을 써요.",
+      "default": ""
+    },
+    "mermaid": {
+      "type": "boolean",
+      "title": "mermaid 다이어그램",
+      "description": "```mermaid 블록을 색 있는 상자 그림으로 그려요. 끄면 코드 그대로 보여요.",
+      "default": true
+    },
+    "copyButtons": {
+      "type": "boolean",
+      "title": "복사 버튼",
+      "description": "코드, 표, 다이어그램, 목록, 인용에 복사 버튼을 달아요. ctrl+x tab 후 Enter, 또는 클릭.",
+      "default": true
+    },
+    "diagramHints": {
+      "type": "boolean",
+      "title": "다이어그램 힌트",
+      "description": "입력할 때마다 \"표·mermaid가 그려진다\"는 짧은 메모를 Claude에게 붙여요. 프롬프트마다 약 190토큰이 들어서 기본은 꺼져 있어요.",
+      "default": false
+    },
+    "codeLineNumbers": {
+      "type": "boolean",
+      "title": "코드 줄 번호",
+      "description": "4줄 이상인 코드 블록 왼쪽에 흐린 줄 번호를 붙여요. 마우스로 긁어 복사하면 번호도 같이 잡히니, 그럴 땐 ⧉ 복사 버튼을 쓰거나 이걸 끄세요.",
+      "default": true
+    }
+  }
+}

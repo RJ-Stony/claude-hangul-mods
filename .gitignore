@@ -1,0 +1,7 @@
+# 참고용으로 받아 둔 남의 저장소 (약 1.5GB)
+references/
+# 예전 펫
+archive/
+# Claude Code가 로드할 때 만드는 타입 파일
+**/.claude-plugin/types/
+node_modules/
